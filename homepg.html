@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+
+.cancelbtn {
+
+width: auto;
+
+padding: 10px 18px;
+
+background-color: red;
+
+}
+
+
+
+/* Center the image and position the close button */
+
+.imgcontainer {
+
+text-align: center;
+
+margin: 24px 0 12px 0;
+
+position: relative;
+
+}
+
+
+
+img.avatar {
+
+width: 40%;
+
+border-radius: 50%;
+
+}
+
+
+
+.container {
+
+padding: 16px;
+
+}
+
+
+
+span.psw {
+
+float: right;
+
+padding-top: 16px;
+
+}
+
+
+
+/* The Modal (background) */
+
+.modal {
+
+display: none; /* Hidden by default */
+
+position: fixed; /* Stay in place */
+
+z-index: 1; /* Sit on top */
+
+left: 0;
+
+top: 0;
+
+width: 100%; /* Full width */
+
+height: 100%; /* Full height */
+
+overflow: auto; /* Enable scroll if needed */
+
+background-color: #36393E; /* Fallback color */
+
+background-color: #36393e; /* Black w/ opacity */
+
+padding-top: 60px;
+
+}
+
+/* The Modal (background) */
+
+.modal-error {
+
+display: none; /* Hidden by default */
+
+position: fixed; /* Stay in place */
+
+z-index: 1; /* Sit on top */
+
+left: 0;
+
+top: 0;
+
+width: 100%; /* Full width */
+
+height: 100%; /* Full height */
+
+overflow: auto; /* Enable scroll if needed */
+
+background-color: whitesmoke; /* Fallback color */
+
+background-color: #36393e; /* Black w/ opacity */
+
+padding-top: 60px;
+
+}
+
+/* Modal Content/Box */
+
+.modal-content {
+
+background-color: #36393e;
+
+margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+
+border: 3px solid #1e2124;
+
+width: 1000px; /* Could be more or less, depending on screen size */
+
+}
+
+/* Modal Content/Box */
+
+.modal-content-error {
+
+background-color: #36393e;
+
+margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+
+border: 3px solid #1e2124;
+
+width: 1000px; /* Could be more or less, depending on screen size */
+
+border-radius: 30px;
+
+}
+
+/* The Close Button (x) */
+
+.close {
+
+position: absolute;
+
+right: 25px;
+
+top: 0;
+
+color: red;
+
+font-size: 35px;
+
+font-weight: bold;
+
+}
+
+
+
+.close:hover,
+
+.close:focus {
+
+color: Black;
+
+cursor: pointer;
+
+}
+
+
+
+/* Add Zoom Animation */
+
+.animate {
+
+-webkit-animation: animatezoom 0.6s;
+
+animation: animatezoom 0.6s
+
+}
+
+
+
+@-webkit-keyframes animatezoom {
+
+from {-webkit-transform: scale(0)}
+
+to {-webkit-transform: scale(1)}
+
+}
+
+@keyframes animatezoom {
+
+from {transform: scale(0)}
+
+to {transform: scale(1)}
+
+}
+
+
+
+/* Change styles for span and cancel button on extra small screens */
+
+@media screen and (max-width: 300px) {
+
+span.psw {
+
+   display: block;
+
+   float: none;
+
+}
+
+.cancelbtn {
+
+   width: 100%;
+
+}
+
+}
+.header {
+  border-radius:00px;
+    height: 70px; 
+    width: 60px; 
+    float: left; 
+    position: relative; 
+    transition:width 0.5s; 
+    -webkit-transition:width 0.5s; 
+    background-color: rgba(29, 29, 29, 0);
+    list-style-type: none;
+    overflow-x:visible;
+    overflow-y:hidden;
+    padding: 0;
+    margin: 0;
+
+}
+.header:hover {
+    width: 100%; /* This is the height on hover */
+    border-radius: 10px;
+    background-color: rgb(255,255,255,0.2);
+    height: 50px;
+}
+.sidediv{
+  width: 75px;
+  height: 2420%;
+  background-color: rgb(255,255,255,0.2);
+  border-radius: 15px;
+  color:white;
+  font-family: 'arial';
+  font-size: 20px;
+  float: left;
+}
+.toptabdiv{
+  width: 100%;
+  height: 35px;
+  background-color: rgb(255,255,255,0.2);
+  border-radius: 15px;
+  color:white;
+  font-family: 'arial';
+  font-size: 20px
+}
+.welcomediv{
+  width: 999;
+  height: 300px;
+  background-color: rgb(255,255,255,0.2);
+  border-radius: 15px;
+  color:white;
+  font-family: 'arial';
+  font-size: 20px;
+  text-align: center;
+}
+.welcomerdiv{
+  width: 999;
+  height: 75px;
+  background-color: rgb(255,255,255,0.2);
+  border-radius: 15px;
+  color:white;
+  font-family: 'arial';
+  font-size: 20px;
+  text-align: center;
+}
+.newsbtn{
+  width: 100px;
+  height: 50px;
+  background-color: yellow;
+  border-radius: 15px;
+  border: none;
+  cursor: pointer;
+  float: right;
+}
+.newsbtn:hover{
+  width: 100px;
+  height: 50px;
+  background-color: greenyellow;
+  border-radius: 15px;
+  margin: auto;
+  border: 2px white solid;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+li {
+  float: left;
+}
+
+li a, .dropbtn {
+  display: inline-block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover, .dropdown:hover .dropbtn {
+  background-color: rgb(255,255,255,0.2);
+}
+
+li.dropdown {
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1;}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+iframe {
+    width: 500px;
+    height: 500px;
+}
+iframe.fullScreen {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+</style>
+</head>
+<script>
+  function requestFullScreen(element) {
+// Supports most browsers and their versions.
+var requestMethod = element.requestFullScreen || element.webkitRequestFullScreen || element.mozRequestFullScreen || element.msRequestFullscreen;
+
+if (requestMethod) { // Native full screen.
+requestMethod.call(element);
+} else if (typeof window.ActiveXObject !== "undefined") { // Older IE.
+var wscript = new ActiveXObject("WScript.Shell");
+if (wscript !== null) {
+    wscript.SendKeys("{F11}");
+}
+}
+}
+
+function makeFullScreen() {
+document.getElementsByTagName("iframe")[0].className = "fullScreen";
+var elem = document.body;
+requestFullScreen(elem);
+}
+function closeFullscreen() {
+if (document.exitFullscreen) {
+document.exitFullscreen();
+} else if (document.webkitExitFullscreen) { /* Safari */
+document.webkitExitFullscreen();
+} else if (document.msExitFullscreen) { /* IE11 */
+document.msExitFullscreen();
+}
+return (ul)
+}
+document.addEventListener("keydown", event => {
+if (event.isComposing || event.keyCode !== 65) {
+escape;
+}
+closeFullscreen();
+});
+</script>
+<body style="background-color:rgb(29, 29, 29)">
+    <div class="toptabdiv">&nbsp;&nbsp;<a style="float:left; font-size: 14px;">&nbsp;&nbsp;&nbsp;<img style="padding-top: 5px;" width="25px" height="25px" src="https://media.discordapp.net/attachments/833440105993601025/1141101713957335150/Untitled89_20230815161038.png?width=657&height=657">&nbsp;&nbsp;&nbsp;</a><a style="margin-right: 82%">&nbsp;&nbsp;<u>DarkHub v1 GameKit</u></a><br><br>
+    <div class="sidediv"><br>&nbsp;&nbsp;<a href="https://google.com"><img href="https://google.com" src="https://cdn.discordapp.com/attachments/833440105993601025/1141124605357084672/Untitled89_20230815173241.png" width="50px" hieght="50px"></a><br><br><a style="text-align: center;">&nbsp;&nbsp;&nbsp;___</a>
+      <br><br><br>&nbsp;&nbsp;<a href="https://google.com"><img href="https://google.com" src="https://cdn.discordapp.com/attachments/833440105993601025/1141124605973639308/Untitled89_20230815173509.png" width="50px" hieght="50px"></a><br><br><a style="text-align: center;">&nbsp;&nbsp;&nbsp;___</a><br><br><br>&nbsp;
+      <a href="https://google.com"><img href="https://google.com" src="https://cdn.discordapp.com/attachments/833440105993601025/1141124606275637268/Untitled89_20230815174003.png" width="50px" hieght="50px"></a><br><br><a style="text-align: center;">&nbsp;&nbsp;&nbsp;___</a><br><br><br>&nbsp;
+      <a href="question.html"><img href="https://google.com" src="https://cdn.discordapp.com/attachments/833440105993601025/1141124606514696192/Untitled89_20230815174120.png" width="50px" hieght="50px"></a><br><br><br><br><br><br><br><br><br><br><br><br>&nbsp;&nbsp;<a href="https://google.com"><img href="https://google.com" src="https://cdn.discordapp.com/attachments/833440105993601025/1141124606514696192/Untitled89_20230815174120.png" width="50px" hieght="50px"></a></div>
+      <div style="background-color: black; width: 30px"></div><div style="margin-left: 180px; margin-right: 180px;" class="welcomediv"><div class="welcomerdiv"><br><a style="margin: auto; text-align: center"><b>Welcome, DarkHub_User23</b></a></div><br><a>Welcome to DarkHub v1 by JavaSploits. If you are seeing this, you went thru the key system, or you are key bypassed. If neither of these are tru, please contact the administrators.</a><br><br><a>If you have a custom theme, and you'd like to change it, you must re-order your personalized client.</a><br><br><a>We update every day, make sure to check for <u>updates</u> so you can get the lates version!</a></div>
+</body>
+</html>
